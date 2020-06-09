@@ -11,14 +11,17 @@ public class myAppTester {
 	  Scanner input = new Scanner(System.in);
 	  int n=0;
 	  System.out.println("Hello Software Engineering World");
-	  System.out.println("Input your number and press enter: ");
+	  System.out.print("Input your number and press enter: ");
 	  n = input.nextInt();
-	  System.out.print("Reverse of the input number is:");
+	  System.out.print("Reverse of the input number is: ");
 	  reverseMethod(n);
 	  System.out.println();
 
 	  // add a line below to call your myTestMethod from here  then remove the block comment symbols  
-
+	  System.out.print("Input a number to check if it is even or odd and its factorial value: ");
+	  int value = input.nextInt();
+	  myTestMethod(value);
+	  System.out.print("\n\n*** Have a great day... bye!! ***");
 	}
 	
 	//This is a method to reverse the number by recursion
@@ -33,15 +36,19 @@ public class myAppTester {
 	       }
 	   }
 
-
-	   /* 
-	       add your test method in this space then remove the block comment symbols
-	       public static void myTestMethod(...){
-
-            
-
-		   }
-	 
-	   */
-
+	// add your test method in this space then remove the block comment symbols
+	public static void myTestMethod(int val) {
+		if (val % 2 == 0)
+			System.out.println("The value " +  val + " is even and its factorial is " + factorial(val));
+		else
+			System.out.println("The value " +  val + " is odd and its factorial is " + factorial(val));
+	}
+	
+	public static long factorial(int val)
+	{
+		if (val == 0 || val == 1)
+			return 1;
+		else
+			return val * factorial(val-1);
+	}
 }
