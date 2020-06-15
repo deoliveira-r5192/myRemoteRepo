@@ -21,7 +21,8 @@ public class myAppTester {
 	  System.out.print("Input a number to check if it is even or odd and its factorial value: ");
 	  int value = input.nextInt();
 	  myTestMethod(value);
-	  System.out.print("\n\n*** Have a great day... bye!! ***");
+	  System.out.println("\n\n*** Done ***");
+	  System.out.println("*** Have a great day! ***");
 	}
 	
 	//This is a method to reverse the number by recursion
@@ -39,9 +40,15 @@ public class myAppTester {
 	// add your test method in this space then remove the block comment symbols
 	public static void myTestMethod(int val) {
 		if (val % 2 == 0)
-			System.out.println("The value " +  val + " is even and its factorial is " + factorial(val));
+		{
+			System.out.println("The value " +  val + " is EVEN");
+			System.out.println("The factorial is " + factorial(val));
+		}
 		else
-			System.out.println("The value " +  val + " is odd and its factorial is " + factorial(val));
+		{
+			System.out.println("The value " +  val + " is ODD");
+			System.out.println("The factorial is " + factorial(val));
+		}
 	}
 	
 	public static long factorial(int val)
